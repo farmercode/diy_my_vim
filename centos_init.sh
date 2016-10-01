@@ -9,6 +9,9 @@ if [ ! -d $vundle_dir ];then
 	git clone https://github.com/gmarik/vundle.git $vundle_dir
 
 fi
+
+cp vimrc_config ~/.vimrc
+vim +BundleInstall +qall
 #下载YoucompleteMe插件，使用vundle安装时总是失败
 YoucompleteMeInstallFile=$vundle_dir"/YouCompleteMe/install.py"
 if [[ ! -f $YoucompleteMeInstallFile ]]; then
@@ -17,7 +20,3 @@ if [[ ! -f $YoucompleteMeInstallFile ]]; then
     git submodule update --init --recursive
     $YoucompleteMeInstallFile --clang-completer
 fi
-
-cp vimrc_config ~/.vimrc
-
-vim +BundleInstall +qall
