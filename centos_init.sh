@@ -3,7 +3,7 @@
 #安装依赖软件包
 yum -y install ctags cmake clang python
 vim_plugin_dir=~/.vim/bundle
-vundle_dir=$vim_plugin_dir"/vundle"
+vundle_dir=$vim_plugin_dir"/Vundle.vim"
 if [ ! -d $vundle_dir ];then
 	echo "installing vundle.Please wait."
 	git clone https://github.com/gmarik/vundle.git $vundle_dir
